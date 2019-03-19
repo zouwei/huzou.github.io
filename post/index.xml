@@ -6,18 +6,18 @@
     <description>Recent content in Posts on 胡邹不胡诌</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>&#39;zh</language>
+    <lastBuildDate>Fri, 10 Feb 2017 15:01:33 +0800</lastBuildDate>
     
 	<atom:link href="https://huzou.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title></title>
-      <link>https://huzou.github.io/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>水果链打破比特币桎梏，TrueChain篇</title>
+      <link>https://huzou.github.io/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/</link>
+      <pubDate>Fri, 10 Feb 2017 15:01:33 +0800</pubDate>
       
-      <guid>https://huzou.github.io/</guid>
-      <description>title = &amp;ldquo;水果链打破比特币桎梏，TrueChain篇&amp;rdquo; date = &amp;ldquo;2017-02-10T15:01:33+08:00&amp;rdquo; description = &amp;ldquo;从技术的角度来看，区块链本质是很多技术整合，并不是单一的技术，这些技术通过组合形成一种全新的数据记录、存储和表达的方式，所以区块链更像是协议&amp;rdquo; tags = [ &amp;ldquo;区块链&amp;rdquo;, &amp;ldquo;TrueChain&amp;rdquo;, &amp;ldquo;共识&amp;rdquo;] categories= [&amp;ldquo;区块链&amp;rdquo;,&amp;ldquo;cat2&amp;rdquo;] topics = [ &amp;ldquo;区块链&amp;rdquo;, &amp;ldquo;Go&amp;rdquo; ] weight = 20 image = &amp;ldquo;https://ws1.sinaimg.cn/large/7ffe3d34gy1g184mvi2n5j20nc0hawgo.jpg&amp;quot;
-我们对区块链的理解，很多都是“盲人摸象”
+      <guid>https://huzou.github.io/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/</guid>
+      <description>我们对区块链的理解，很多都是“盲人摸象”
 说起区块链，很多人都知道区块链是一个分布式账本，是一种去中心化、去信任的集体自治的分布式数据库技术方案。
 从数据的角度来看，区块链是一种几乎不可能被篡改分布式数据库，在区块链的应用里数据是分布式存储的，同时数据也是分布式记录的，由系统参与者集体参与自治维护的。
 从技术的角度来看，区块链本质是很多技术整合，并不是单一的技术，这些技术通过组合形成一种全新的数据记录、存储和表达的方式，所以区块链更像是“协议”而非“技术”。
@@ -37,7 +37,17 @@
 拥有足够强大计算能力会面临“自私挖矿”的问题
 所以，区块链技术是在不断发展的，我们看到的区块链是还很多不成熟，还没有得到大规模生态应用的。但是，正确的东西，一定会被证明它就是正确的，这个过程也将会用越来越多正确的方法去实践，去验证，去尝试。水果链就是一次新的尝试，是针对比特币的不足之处进行了针对性的改进，基于Pow共识机制比特币之后并没有什么特别优秀的方案，水果链fPow给我们带来一些新的希望。
 什么是水果链（FruitChains）？
-FruitChains是由康奈尔大学教授Rafael Pass，副教授Elaine Shi两个人共同创建的，FruitChains是基于中本聪的比特币来做的改善，所以也是基于比特币链协议来实现的，和比特币不一样的地方在于加入了一个Fruit的概念，Fruit类似Block也需要POW，只是Fruit的计算难度比较低，并且水果是挂在最近的Blcok下面，交易信息都保存在Fruit里面。</description>
+FruitChains是由康奈尔大学教授Rafael Pass，副教授Elaine Shi两个人共同创建的，FruitChains是基于中本聪的比特币来做的改善，所以也是基于比特币链协议来实现的，和比特币不一样的地方在于加入了一个Fruit的概念，Fruit类似Block也需要POW，只是Fruit的计算难度比较低，并且水果是挂在最近的Blcok下面，交易信息都保存在Fruit里面。
+由于FruitChains挖Block和挖Fruit是同时进行，并且挖Fruit的难度都极低的，挖Block 的难度是固定的，所以无需加入矿池，节点更加分散，独立化，就不会出现矿场胁持带来51%的攻击问题。挖掘Fruit难度非常小，提高TPS能力并提高响应速度，这样交易费用不稳定的问题也可以解决。
+私自挖矿问题，由于Block里面包含了Fruit并且要求Fruit是最近的（新鲜度），使得攻击者私自扣留的水果失效，无法通过分叉长度抢占区块共识，也就不会出现私自挖矿的情况。
+TrueChain选择FruitChains作为混合共识中的fpow部分，通过将pbft确认交易Transaction极低难度极短时间内共识成水果Fruit。
+TrueChain（初链）
+TrueChain是基于水果链（FruitChains）论文的工程化实现，以下是TrueChain白皮书复盘内容复盘，一张导图让你看懂什么是初链（TrueChain）。
+图片压缩看不清，请转至下面链接查看完整的思维导图
+百度脑图－便捷的思维工具naotu.baidu.com
+总结
+我们可以看到，在区块链的发展上，不管是早期比特币POW共识机制，还是POS共识机制（本篇文章未描述POS共识机制），都在不断更新和发展自身的技术体系。POS共识算法已经升级到了DPOS共识算法，而相对最公平的POW算法，也正在用fPow共识算法实现工程化实现。
+我相信，区块链随着时间而越来的越成熟，短期内即可预见基于区块链公链的个行业应用生态即将到来，token经济将会为今后的商业社会带来新的可能与契机。</description>
     </item>
     
   </channel>
