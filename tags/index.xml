@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 胡邹不胡诌</title>
+    <link>https://huzou.github.io/tags/</link>
+    <description>Recent content in Tags on 胡邹不胡诌</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>&#39;zh</language>
+    
+	<atom:link href="https://huzou.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Truechain</title>
+      <link>https://huzou.github.io/tags/truechain/</link>
+      <pubDate>Fri, 10 Feb 2017 15:01:33 +0800</pubDate>
+      
+      <guid>https://huzou.github.io/tags/truechain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>共识</title>
+      <link>https://huzou.github.io/tags/%E5%85%B1%E8%AF%86/</link>
+      <pubDate>Fri, 10 Feb 2017 15:01:33 +0800</pubDate>
+      
+      <guid>https://huzou.github.io/tags/%E5%85%B1%E8%AF%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>区块链</title>
+      <link>https://huzou.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+      <pubDate>Fri, 10 Feb 2017 15:01:33 +0800</pubDate>
+      
+      <guid>https://huzou.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
