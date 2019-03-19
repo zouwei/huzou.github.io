@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 胡邹不胡诌</title>
-    <link>https://huzou.github.io/post/</link>
+    <link>https://blog.onela.cn/post/</link>
     <description>Recent content in Posts on 胡邹不胡诌</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>&#39;zh</language>
     <lastBuildDate>Fri, 10 Feb 2017 15:01:33 +0800</lastBuildDate>
     
-	<atom:link href="https://huzou.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.onela.cn/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>水果链打破比特币桎梏，TrueChain篇</title>
-      <link>https://huzou.github.io/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/</link>
+      <link>https://blog.onela.cn/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/</link>
       <pubDate>Fri, 10 Feb 2017 15:01:33 +0800</pubDate>
       
-      <guid>https://huzou.github.io/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/</guid>
+      <guid>https://blog.onela.cn/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/</guid>
       <description>我们对区块链的理解，很多都是“盲人摸象”
 说起区块链，很多人都知道区块链是一个分布式账本，是一种去中心化、去信任的集体自治的分布式数据库技术方案。
 从数据的角度来看，区块链是一种几乎不可能被篡改分布式数据库，在区块链的应用里数据是分布式存储的，同时数据也是分布式记录的，由系统参与者集体参与自治维护的。

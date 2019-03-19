@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 胡邹不胡诌</title>
-    <link>https://huzou.github.io/categories/</link>
+    <link>https://blog.onela.cn/categories/</link>
     <description>Recent content in Categories on 胡邹不胡诌</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>&#39;zh</language>
     <lastBuildDate>Fri, 10 Feb 2017 15:01:33 +0800</lastBuildDate>
     
-	<atom:link href="https://huzou.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.onela.cn/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cat2</title>
-      <link>https://huzou.github.io/categories/cat2/</link>
+      <link>https://blog.onela.cn/categories/cat2/</link>
       <pubDate>Fri, 10 Feb 2017 15:01:33 +0800</pubDate>
       
-      <guid>https://huzou.github.io/categories/cat2/</guid>
+      <guid>https://blog.onela.cn/categories/cat2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>区块链</title>
-      <link>https://huzou.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+      <link>https://blog.onela.cn/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
       <pubDate>Fri, 10 Feb 2017 15:01:33 +0800</pubDate>
       
-      <guid>https://huzou.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
+      <guid>https://blog.onela.cn/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
       <description></description>
     </item>
     
