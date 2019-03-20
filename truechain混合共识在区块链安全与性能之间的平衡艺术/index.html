@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="&#39;zh" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>TrueChain混合共识在区块链安全与性能之间的平衡艺术 &middot; 胡邹不胡诌</title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://blog.onela.cn/favicon.ico" />
+    <link rel="canonical" href="https://blog.onela.cn/truechain%E6%B7%B7%E5%90%88%E5%85%B1%E8%AF%86%E5%9C%A8%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8%E4%B8%8E%E6%80%A7%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%89%BA%E6%9C%AF/" />
+
+     <meta name="description" content="在传统社会体系会中，中心化的机构、个人是传统社会信用体系的最底层机制。因为这个中心化的机构或者个人带有权威或信用属性，这一方式是人类发展过程中最具智慧的成果之一。" /> 
+
+     
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/7ffe3d34gy1g19ds2gua4j20ku0bl74q.jpg"/>
+    
+ 
+    <meta name="twitter:title" content="TrueChain混合共识在区块链安全与性能之间的平衡艺术"/>
+    <meta name="twitter:description" content="在传统社会体系会中，中心化的机构、个人是传统社会信用体系的最底层机制。因为这个中心化的机构或者个人带有权威或信用属性，这一方式是人类发展过程中最具智慧的成果之一。"/>
+    <meta name="twitter:url" content="https://blog.onela.cn/truechain%E6%B7%B7%E5%90%88%E5%85%B1%E8%AF%86%E5%9C%A8%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8%E4%B8%8E%E6%80%A7%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%89%BA%E6%9C%AF/" />
+    <meta name="twitter:site" content="@"/>
+
+    <meta property="og:site_name" content="胡邹不胡诌" />
+    <meta property="og:title" content="TrueChain混合共识在区块链安全与性能之间的平衡艺术 &middot; 胡邹不胡诌" />
+    <meta property="og:url" content="https://blog.onela.cn/truechain%E6%B7%B7%E5%90%88%E5%85%B1%E8%AF%86%E5%9C%A8%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8%E4%B8%8E%E6%80%A7%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%89%BA%E6%9C%AF/" />
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="在传统社会体系会中，中心化的机构、个人是传统社会信用体系的最底层机制。因为这个中心化的机构或者个人带有权威或信用属性，这一方式是人类发展过程中最具智慧的成果之一。" />
+
+    <meta property="article:published_time" content="2018-10-26T15:01:33&#43;08:00" />
+    <meta property="article:tag" content="区块链" /><meta property="article:tag" content="TrueChain" /><meta property="article:tag" content="共识" />
+
+    <meta property="og:image" content="https://ws1.sinaimg.cn/large/7ffe3d34gy1g19ds2gua4j20ku0bl74q.jpg"/>
+
+
+    <meta name="generator" content="Hugo 0.54.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="https://blog.onela.cn/built/screen.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://blog.onela.cn/css/casper-two.css" /> 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    
+
+     
+
+</head>
+
+
+<body class="post-template">
+  <div class="site-wrapper"> 
+
+<header class="site-header outer">
+  <div class="inner">
+    <nav class="site-nav">
+      <div class="site-nav-left">
+        <a class="site-nav-logo" href="#"><img src="https://blog.onela.cn/hugo-logo.png" alt="胡邹不胡诌" /></a>
+
+        <ul class="nav" role="menu">
+        
+        
+        
+            <li class="" role="menuitem">
+              <a href="/">首页</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="/tags/%E5%85%B1%E8%AF%86/">前沿</a>
+            </li>
+        
+            <li class="" role="menuitem">
+              <a href="https://www.zhihu.com/people/onela">商业</a>
+            </li>
+        
+      </ul></div>
+
+      <div class="site-nav-right">
+        <div class="social-links">
+                    
+
+                    
+
+                    <a class="social-link" href="https://github.com/zouwei" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+
+                    
+
+                    
+        </div>  
+            
+      </div>
+
+    </nav>  
+
+  </div>
+</header>
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+    
+      <article class="post-full post"> 
+    <header class="post-full-header">
+        <section class="post-full-meta">
+            <time class="post-full-meta-date" datetime="2018-10-26">26 October 2018</time>
+                <span class="date-divider">/</span> <a href="https://blog.onela.cn/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">#区块链</a>&nbsp;<a href="https://blog.onela.cn/tags/truechain/">#TrueChain</a>&nbsp;
+        </section>
+        <h1 class="post-full-title">TrueChain混合共识在区块链安全与性能之间的平衡艺术</h1>
+    </header>
+    
+    <figure class="post-full-image" style="background-image: url(https://ws1.sinaimg.cn/large/7ffe3d34gy1g19ds2gua4j20ku0bl74q.jpg)">
+    </figure>
+
+    <section class="post-full-content">
+        <div class="kg-card-markdown">
+        
+
+<p><strong>共识是区块链的核心价值</strong></p>
+
+<p>在传统社会体系会中，中心化的机构、个人是传统社会信用体系的最底层机制。因为这个中心化的机构或者个人带有权威或信用属性，这一方式是人类发展过程中最具智慧的成果之一。现代社会尤其是互联网引导的信息化革命之后随之而来的人工智能时代的来临，信用体系必然也是整个社会系统的最底层机制，由于社会结构性的变化打破的传统中心化的价值体现。简单的理解就是，传统的信用价值体系已经不能完全覆盖现有社会系统的全部领域，但是，变化的社会结构最基本共识是没有发生任何变化的。这时候，我们就需要通过其他手段来实现这其中的共识价值，而区块链就是这一解决思路，但是我相信区块链肯定不是唯一的解决方案。</p>
+
+<p>共识价值的表现在“共识”与“价值”两个层面，共识的字面意思就是“共同的认识”，这是客观的认识基础，就好像人与人是不同的，这种不同不仅体现在身材、长相、能力，更体现在文化、观点、想法、利益诉求等等方面。共识，简而言之，就是一个群体的成员在某一方面达成的一致意见。例如身高我们可以利用长度单位来体现差异，大家必然对长度单位必然是一种共识，那么基于这个公式，就会得出一些自己的<strong>价值判断</strong>，例如找男朋友的话找个180cm的更有安全感。</p>
+
+<p><strong>比特币的共识基础Pow工作量证明</strong></p>
+
+<p>早期的计算机网络系统跟传统的人类社会体系是惊人的一致的，都是基于中心化的应用形成现在整个互联网网络体系，社交网络、支付网络、搜索等等都有相对垄断的中心化应用维持着正常的运转。直到2008年中本聪的《比特币：一种点对点式的电子现金系统》革命性的提出了计算机的一种共识机制，工作量证明（Proof of Work，简称POW）是共识机制的一种，可简单理解为一份证明，证明你做过一定量的工作，即我通过查看工作结果就能知道你完成了指定量的工作。PoW通过评估你的工作量来决定你获得记账权的机率，工作量越大，就越有可能获得此次记账机会。</p>
+
+<p>10年过去了，风雨十年也是风云十年，相信你必然对区块链已经或多或少的有很一些了解，再来谈工作量证明机制，我们是肯定了Pow最核心的价值到目前是相对最公平的共识机制，但是这种公平也已经被证明了可能或是正在被破坏。Pow以前所未有的速度吸引计算资源，挖矿造成了大量的资源消耗，尤其是ASIC（专用集成电路）大型矿机的出现，运力较少的矿场都在出局的边缘，更不用说个人挖矿，大型的矿场几乎垄断了比特币网络几乎所有的算力，所以又出现了矿池的问题。PoW共识算法算力集中化，慢慢的偏离了原来的去中心化轨道。此外，比特币交易确认需要得到大多数交易确认，区块确时间长达10分钟，每笔交易上限是7笔，要知道现在visa的平均每秒交易量上万，支付宝峰值接近9万，比特币基于Pow共识面临的最大的挑战还是效率问题和可扩展性，因为这些缺陷注定无缘大型商业应用的。</p>
+
+<h2 id="pbft拜占庭容错"><strong>PBFT拜占庭容错</strong></h2>
+
+<p>我们发现了Pow的缺点，但对于工作量的证明共识也是价值的认同的，所以现在比特币还是区块链最基础的“硬通货”，不亚于现实世界中的黄金在货币体系中的地位。读这篇文章，默认你是对比特币有一定了解的人群，我们假设一个问题，如果Pow机制如果能克服这些缺陷，是否有大型商业化应用的可能呢？</p>
+
+<p>我相信这个答案是肯定的，FruitChains（水果链）有一个新的思路，康奈尔大学教授Rafael Pass，副教授Elaine Shi两个人基于中本聪比特币做出改善。采用水果链作为慢链（snailchain），⽤以代替Nakamoto(传统链),以抵御1/3−ε腐败(inhashpower)随机⼩常数ε,以获得最优的适应性。这句话的意思是系统中每次都不能超过三分之⼀的参与者是有意或⽆意的恶意节点，那么BFT共识协议就能够确保该系统的安全性。在Pow的挖矿的基础上改进了挖矿流程，在挖矿的同时产生许多水果，挖水果非常容易，有一定运气即可挖到水果在确认水果有效的新鲜度之后，只要矿工成功挖取到矿之后，需要从挖矿收益中分出一部分给挖到水果的用户。</p>
+
+<p>PBFT拜占庭共识是基于BFT的改良版，在基于拜占庭容错协议的区块链应用具备很多行业性的优点，基于拜占庭将军问题，一致性的确保主要分为这三个阶段：预准备（pre-prepare）、准备(prepare)和确认(commit)。流程如下图所示：</p>
+
+<p><img src="https://ws1.sinaimg.cn/large/7ffe3d34gy1g19drdyirvj20k008xgm7.jpg" alt="" /></p>
+
+<p>根据上述流程，在 N ≥ 3F + 1 的情況下一致性是可能解決，N为总计算机数，F为有问题的计算机总数</p>
+
+<p>N=4 F=0 时：</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>得到数据</th>
+<th>最终数据</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>A</td>
+<td>1 1 1 1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>B</td>
+<td>1 1 1 1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>C</td>
+<td>1 1 1 1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>D</td>
+<td>1 1 1 1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<p>N=4 F=1 时：</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>得到数据</th>
+<th>最终数据</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>A</td>
+<td>1 1 1 0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>B</td>
+<td>1 1 0 1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>C</td>
+<td>1 0 1 1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>D</td>
+<td>0 1 1 1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<p>N=4 F=2 时：</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>得到数据</th>
+<th>最终数据</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>A</td>
+<td>1 1 0 0</td>
+<td>NA</td>
+</tr>
+
+<tr>
+<td>B</td>
+<td>1 0 0 1</td>
+<td>NA</td>
+</tr>
+
+<tr>
+<td>C</td>
+<td>0 0 1 1</td>
+<td>NA</td>
+</tr>
+
+<tr>
+<td>D</td>
+<td>0 1 1 0</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>由此可以看出，拜占庭容错能够容纳将近1/3的错误节点误差，IBM创建的Hyperledger就是使用了该算法作为共识算法。</strong></p>
+
+<p>也就是说基于拜占庭委员会有一个核心的优势就是能最大允许接近1/3的错误出现，这一举措对区块链的关键瓶颈TPS有着突破性的意义。</p>
+
+<p><strong>但是PBFT自身存在一些问题</strong></p>
+
+<p>拜占庭委员相互之间需要每个之间都得到确认，这对于公链应用绝对是灾难，故BFT只能存在于一些相对参与者较少的情况，联盟链能使用PBFT也是基于这个原因。此外PBFT的安全性也存在女巫攻击（Sybil attack）的较大风险。任何拜占庭委员选择过程中，被选择的概率与算⼒成正⽐。拜占庭委员会很容易受到拥有⼤量算⼒的矿池的攻击。</p>
+
+<h3 id="解读混合共识">解读混合共识</h3>
+
+<p>初链的混合共识的运用其巧妙之处，利用水果链作为慢链，只用于选择委员会的成员。交易和智能合约由网络上的每个节点执行，轮值BFT委员会进行大量处理能力将会有很大提升。</p>
+
+<p>FBT委员会必须拥有超过2/3的诚实成员，只要不超过1/3的“自私矿工”，那么水果链是能抵抗自私矿工的，还是面临以太坊同样的问题，在攻击者控制超出33%的算力情况下，BFT委员会仍然很脆弱。这对随机选择BFT的成员，面临女巫攻击是脆弱的。</p>
+
+<pre><code>什么是女巫攻击（Sybil attack）
+
+Sybil Attack可译作女巫攻击。Douceur首次给出了Sybil攻击的概念，即在对等网络中，单一节点具有多个身份标识，通过控制系统的大部分节点来削弱冗余备份的作用。
+
+女巫攻击是在P2P网络中，因为节点随时加入退出等原因，为了维持网络稳定，同一份数据通常需要备份到多个分布式节点上，这就是数据冗余机制。女巫攻击是攻击数据冗余机制的一种有效手段。
+
+如果网络中存在一个恶意节点，那么同一个恶意节点可以具有多重身份，就如电影了的女主角都可以分裂出16个身份，那么恶意节点比它还能分。这一分可好，原来需要备份到多个节点的数据被欺骗地备份到了同一个恶意节点（该恶意节点伪装成多重身份），这就是女巫攻击。
+
+怎样解决女巫攻击?
+一种方法是工作量证明机制，即证明你是一个节点，别只说不练，而是要用计算能力证明，这样极大地增加了攻击的成本。
+另一种方法是身份认证（相对于PoW协议，女巫攻击是基于BFT拜占庭使用容错协议的Blockchain需要考虑的问题，需要采用相应的身份认证机制）。
+1.基于第三方的身份认证
+每加入一个新的节点都需要与某一个可靠的第三方节点进行身份验证。
+2.纯分布式的身份认证
+每加入一个新的节点都需要获得当前网络中所有可靠节点的认证，这种方法采用了随机密钥分发验证的公钥体制的认证方式，需要获得网络中大多数节点的认证才能加入该网络。
+
+</code></pre>
+
+<p>在初链的公开资料中也对这一情况有对应的方案。当一个诚实的BFT节点达到λ链的长度，将发布链中的每个果实链的唯一矿工ID作为候选人（或者，每个矿工ID开采超过v水果）。通过VRF的应用，从获选人中随机选出新的BFT委员。这样显然Sybil攻击在这个方案下是不可能的了，因为你需要最低等级的Pow才能成为获选人，对于一个庞大的矿池来说，要在拜占庭委员会达成协议也并非易事，一个水果比一个区块更容易获得，这个巧妙的结合确实是个非常有意思的地方。</p>
+
+<p>这对委员的选举又有新的问题，如何保证每一次选举的成员的表现正向反馈，而这种正向反馈到后期又不至于形成选举壁垒。初链给出的方案是如果委员表现良好，就不不要强迫环节，因此在默写情况下可以避免委员的换届开销。另一方面如果前一届委员表现良好，就增加了新节点当选为委员的难度。因此，这就需要在固定的时间点强制切换委员会的设计，当然在委员成员行为不当的情况下也出会触发强制换届，此外在委员的替换选举标准也做了对应措施。</p>
+
+<p>初链所选择的混合共识，POW共识确保了激励和委员会的选举产生，PBFT层则承担⼀种具有瞬时处理⾼吞吐量事物，交易验证，公平交易贸易委员会的成员轮值功能的⾼效共识机制，以及作为⼀种补偿基础设施去处理不同的基础设施。</p>
+
+<p>在初链的目标设计上每个分片（本篇不讨论）上达到了10000TPS，并且分片的数量被设计成为相对于交易量的需求线性增长（大致与节点数量相关），我们粗略估计初链的交易处理TPS的设计理论值在10000-100000TPS之间。对比与支付宝峰值90000的交易量，理论上初链的设计模型是具备商业化应用的理论基础的。在10年的时间，初链的技术方案（参考比特币）是可以预见性的维持相对稳定的技术生态的。</p>
+
+<p><strong>我们可以看到是初链的混合共识的运用，对区块链关键性的一些问题提出较好的解决方案或者是解决思路，但由于基于混合共识的区块链公链应用还处在早期工程化实现阶段，还有一些细节还有待进一步优化以及解决，这在公链应用场景化应用中多了许多期待。</strong></p>
+
+<h3 id="混合共识的在区块链的研究的启发意义以及带给未来的一些思考">混合共识的在区块链的研究的启发意义以及带给未来的一些思考</h3>
+
+<p>区块链发展至今，分水岭已经凸显出来了，资本裹挟的区块链（币圈）开始洗去铅华，而真正有价值的区块链项目也开始进入不同的细分化领域并得到实际的应用。然而，区块链应用的大规模落地和应用生态的建立还尚需时日，在这一个过程中，总需要一些先驱者去做一些尝试，任何一次技术革命的诞生必然也不是偶然的，必然的是结果，偶然的是我们其中的参与者总有那么一批人刚好踩中。</p>
+
+<p>区块链行业技术的发展也已经取得长足的进步，我么常常听到的区块链1.0、2.0、3.0、4.0等都旨在标榜自己的技术指标有了很大的进步。但是，这个所谓的进步在区块链应用生态形成之前都显得人微言轻之感，我们需要的是已结果为导向的具体成效，这样对于普通人才能带来切合实际的利益。回到混合共识的这个话题，我觉得这是一个区块链公链生态解决思路的一个突破点，至于能不能带来一次技术革命还是未知，就让我们拭目以待。但是可以肯定的是，基于混合共识的区块链应用必然会进入越来越多的解决方案中，区块链从来都不是单一的技术，对未来的诸多问题的解决也不可能只靠区块链就能全部解决的。</p>
+    
+        </div>
+    </section>
+
+    <footer class="post-full-footer">
+      <section class="author-card">
+        <img class="author-profile-image" src="https://blog.onela.cn/img/ghost-icon.jpg" alt="Author" />
+        <section class="author-card-content">
+            <h4 class="author-card-name"><a href="https://blog.onela.cn/">胡邹</a></h4>
+                <p>生活不在别处，脚下即是前方</p>
+        </section>
+      </section>
+    </footer>
+</article>
+    
+    
+    
+
+  </div>
+</main>
+
+
+<aside class="read-next outer">
+  <div class="inner">
+    <div class="read-next-feed">      
+      
+
+      
+      
+      <article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="https://blog.onela.cn/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/">
+      <div class="post-card-image" style="background-image: url(https://ws1.sinaimg.cn/large/7ffe3d34gy1g184mvi2n5j20nc0hawgo.jpg)"></div>
+    </a>
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://blog.onela.cn/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/">
+          <header class="post-card-header">
+              <span class="post-card-tags">
+              #区块链 
+              #TrueChain 
+              #共识  </span>
+              
+              <h2 class="post-card-title">水果链打破比特币桎梏，TrueChain篇</h2>
+          </header>
+          <section class="post-card-excerpt">
+               
+                <p>从技术的角度来看，区块链本质是很多技术整合，并不是单一的技术，这些技术通过组合形成一种全新的数据记录、存储和表达的方式，所以区块链更像是协议</p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://blog.onela.cn/img/ghost-icon.jpg" alt="Author" />
+          <span class="post-card-author"><a href="/">胡邹</a></span>
+      </footer>
+    </div>
+</article>
+      
+    </div>
+  </div>
+</aside>
+
+<div class="floating-header">
+  <div class="floating-header-logo">
+    <a href="https://blog.onela.cn/">
+      <img src="https://blog.onela.cn/hugo-logo.png" alt="胡邹不胡诌" />
+      <span>胡邹不胡诌</span>
+    </a>
+  </div>
+  <span class="floating-header-divider">&mdash;</span>
+  <div class="floating-header-title">TrueChain混合共识在区块链安全与性能之间的平衡艺术</div>
+  <div class="floating-header-share">
+    <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
+    </div>
+    
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=TrueChain%e6%b7%b7%e5%90%88%e5%85%b1%e8%af%86%e5%9c%a8%e5%8c%ba%e5%9d%97%e9%93%be%e5%ae%89%e5%85%a8%e4%b8%8e%e6%80%a7%e8%83%bd%e4%b9%8b%e9%97%b4%e7%9a%84%e5%b9%b3%e8%a1%a1%e8%89%ba%e6%9c%af&amp;url=https%3a%2f%2fblog.onela.cn%2ftruechain%25E6%25B7%25B7%25E5%2590%2588%25E5%2585%25B1%25E8%25AF%2586%25E5%259C%25A8%25E5%258C%25BA%25E5%259D%2597%25E9%2593%25BE%25E5%25AE%2589%25E5%2585%25A8%25E4%25B8%258E%25E6%2580%25A7%25E8%2583%25BD%25E4%25B9%258B%25E9%2597%25B4%25E7%259A%2584%25E5%25B9%25B3%25E8%25A1%25A1%25E8%2589%25BA%25E6%259C%25AF%2f"
+          onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+      </a>
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.onela.cn%2ftruechain%25E6%25B7%25B7%25E5%2590%2588%25E5%2585%25B1%25E8%25AF%2586%25E5%259C%25A8%25E5%258C%25BA%25E5%259D%2597%25E9%2593%25BE%25E5%25AE%2589%25E5%2585%25A8%25E4%25B8%258E%25E6%2580%25A7%25E8%2583%25BD%25E4%25B9%258B%25E9%2597%25B4%25E7%259A%2584%25E5%25B9%25B3%25E8%25A1%25A1%25E8%2589%25BA%25E6%259C%25AF%2f"
+          onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+      </a>
+  </div>
+
+  <progress class="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+</div>
+
+
+
+<footer class="site-footer outer">
+  <div class="site-footer-content inner">
+    <section class="copyright" style="line-height: 1.3em;">
+      <a href="/">胡邹</a>  <br>
+      
+    </section>
+    <nav class="site-footer-nav">
+        <a href="/">Latest Posts</a>
+        
+        
+        <a href="https://github.com/zouwei" target="_blank" rel="noopener">Github</a>
+        
+        
+    </nav>  
+  </div>
+</footer>
+
+</div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://blog.onela.cn/js/jquery.fitvids.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    <script>
+
+
+
+
+
+$(document).ready(function () {
+    
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+</body></html>
