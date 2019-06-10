@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>区块链 on 胡邹不胡诌</title>
-    <link>https://blog.onela.cn/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+    <link>https://huzou.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
     <description>Recent content in 区块链 on 胡邹不胡诌</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>&#39;zh</language>
     <lastBuildDate>Fri, 26 Oct 2018 15:01:33 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.onela.cn/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huzou.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>TrueChain混合共识在区块链安全与性能之间的平衡艺术</title>
-      <link>https://blog.onela.cn/truechain%E6%B7%B7%E5%90%88%E5%85%B1%E8%AF%86%E5%9C%A8%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8%E4%B8%8E%E6%80%A7%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%89%BA%E6%9C%AF/</link>
+      <link>https://huzou.github.io/truechain%E6%B7%B7%E5%90%88%E5%85%B1%E8%AF%86%E5%9C%A8%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8%E4%B8%8E%E6%80%A7%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%89%BA%E6%9C%AF/</link>
       <pubDate>Fri, 26 Oct 2018 15:01:33 +0800</pubDate>
       
-      <guid>https://blog.onela.cn/truechain%E6%B7%B7%E5%90%88%E5%85%B1%E8%AF%86%E5%9C%A8%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8%E4%B8%8E%E6%80%A7%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%89%BA%E6%9C%AF/</guid>
+      <guid>https://huzou.github.io/truechain%E6%B7%B7%E5%90%88%E5%85%B1%E8%AF%86%E5%9C%A8%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8%E4%B8%8E%E6%80%A7%E8%83%BD%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%89%BA%E6%9C%AF/</guid>
       <description>共识是区块链的核心价值
 在传统社会体系会中，中心化的机构、个人是传统社会信用体系的最底层机制。因为这个中心化的机构或者个人带有权威或信用属性，这一方式是人类发展过程中最具智慧的成果之一。现代社会尤其是互联网引导的信息化革命之后随之而来的人工智能时代的来临，信用体系必然也是整个社会系统的最底层机制，由于社会结构性的变化打破的传统中心化的价值体现。简单的理解就是，传统的信用价值体系已经不能完全覆盖现有社会系统的全部领域，但是，变化的社会结构最基本共识是没有发生任何变化的。这时候，我们就需要通过其他手段来实现这其中的共识价值，而区块链就是这一解决思路，但是我相信区块链肯定不是唯一的解决方案。
 共识价值的表现在“共识”与“价值”两个层面，共识的字面意思就是“共同的认识”，这是客观的认识基础，就好像人与人是不同的，这种不同不仅体现在身材、长相、能力，更体现在文化、观点、想法、利益诉求等等方面。共识，简而言之，就是一个群体的成员在某一方面达成的一致意见。例如身高我们可以利用长度单位来体现差异，大家必然对长度单位必然是一种共识，那么基于这个公式，就会得出一些自己的价值判断，例如找男朋友的话找个180cm的更有安全感。
@@ -33,10 +33,10 @@ N=4 F=0 时：
     
     <item>
       <title>水果链打破比特币桎梏，TrueChain篇</title>
-      <link>https://blog.onela.cn/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/</link>
+      <link>https://huzou.github.io/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/</link>
       <pubDate>Fri, 10 Feb 2017 15:01:33 +0800</pubDate>
       
-      <guid>https://blog.onela.cn/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/</guid>
+      <guid>https://huzou.github.io/%E6%B0%B4%E6%9E%9C%E9%93%BE%E6%89%93%E7%A0%B4%E6%AF%94%E7%89%B9%E5%B8%81%E6%A1%8E%E6%A2%8Ftruechain%E7%AF%87/</guid>
       <description>我们对区块链的理解，很多都是“盲人摸象”
 说起区块链，很多人都知道区块链是一个分布式账本，是一种去中心化、去信任的集体自治的分布式数据库技术方案。
 从数据的角度来看，区块链是一种几乎不可能被篡改分布式数据库，在区块链的应用里数据是分布式存储的，同时数据也是分布式记录的，由系统参与者集体参与自治维护的。
